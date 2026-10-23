@@ -1,11 +1,100 @@
- <!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galaxy Defenders</title>
+  <style>
+    :root {
+      --fondo: #0e1424;
+      --superficie: #17203a;
+      --texto: #e9edf7;
+      --apagado: #9aa6c4;
+      --acento: #5ec8ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Cabecera y menú centrado */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 1rem 0;
+      border-bottom: 1px solid #26314f;
+      background: var(--superficie);
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--texto);
+      text-decoration: none;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.75rem;
+    }
+    nav a {
+      display: block;
+      padding: 0.75rem 0.25rem;
+      color: var(--apagado);
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+    }
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--texto);
+      border-bottom-color: var(--acento);
+    }
+    a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+
+    /* Contenido */
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
+    p { color: var(--apagado); }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--apagado);
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola, Galaxy Defenders</h1>
-  <p>Página inicial.</p>
+  <header>
+    <a class="logo" href="#inicio">Galaxy Defenders</a>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="#inicio" aria-current="page">Inicio</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <h1>Hola, Galaxy Defenders</h1>
+    <p>Página inicial.</p>
+  </main>
+
+  <footer>© 2026 Galaxy Defenders</footer>
 </body>
 </html>
