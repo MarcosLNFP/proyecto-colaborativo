@@ -1,14 +1,25 @@
-# proyecto-colaborativo
-proyecto colaborativo con mis compañeros: Álvaro, Musa, Rahul y Marcos
+# Proyecto colaborativo
 
-=====================================
+Proyecto colaborativo desarrollado por **Álvaro, Musa, Rahul y Marcos**.
+
+---
+
+<div align="center">
+
+```text
 ███╗   ███╗██╗   ██╗███████╗ █████╗
 ████╗ ████║██║   ██║██╔════╝██╔══██╗
 ██╔████╔██║██║   ██║███████╗███████║
-██║╚██╔╝██║██║   ██║╚════██║██╔══██║
+██║╚██╔╝██║██║   ██║╚════██║██╔══██╗
 ██║ ╚═╝ ██║╚██████╔╝███████║██║  ██║
 ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
-=====================================
+```
 
-Esta es la rama de Musa Younas Aqsa.
-𝑀𝑢𝑠𝑎 𝑌𝑜𝑢𝑛𝑎𝑠 𝐴𝑞𝑠𝑎® 2026
+### Rama de Musa Younas Aqsa
+
+*𝑀𝑢𝑠𝑎 𝑌𝑜𝑢𝑛𝑎𝑠 𝐴𝑞𝑠𝑎® 2026*
+
+</div>
+
+---
+
