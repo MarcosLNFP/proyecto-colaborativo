@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galaxy Defenders</title>
+
   <style>
     :root {
       --fondo: #0e1424;
@@ -12,7 +13,13 @@
       --apagado: #9aa6c4;
       --acento: #5ec8ff;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: "Trebuchet MS", "Segoe UI", sans-serif;
       background: var(--fondo);
@@ -21,7 +28,7 @@
       line-height: 1.6;
     }
 
-    /* Cabecera y menú centrado */
+    /* Cabecera y menú */
     header {
       display: flex;
       flex-direction: column;
@@ -31,6 +38,7 @@
       border-bottom: 1px solid #26314f;
       background: var(--superficie);
     }
+
     .logo {
       font-size: 1.6rem;
       font-weight: 700;
@@ -38,6 +46,7 @@
       color: var(--texto);
       text-decoration: none;
     }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -45,6 +54,7 @@
       flex-wrap: wrap;
       gap: 0.25rem 1.75rem;
     }
+
     nav a {
       display: block;
       padding: 0.75rem 0.25rem;
@@ -52,34 +62,127 @@
       text-decoration: none;
       border-bottom: 3px solid transparent;
     }
+
     nav a:hover,
     nav a[aria-current="page"] {
       color: var(--texto);
       border-bottom-color: var(--acento);
     }
-    a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
 
-    /* Contenido */
+    a:focus-visible {
+      outline: 2px solid var(--acento);
+      outline-offset: 2px;
+    }
+
+    /* Contenido principal */
     main {
-      max-width: 40rem;
+      max-width: 60rem;
       margin: 0 auto;
       padding: 4rem 1.5rem;
       text-align: center;
     }
-    h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
-    p { color: var(--apagado); }
+
+    h1 {
+      font-size: 2.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--apagado);
+    }
+
+    /* Apartado de noticias */
+    #noticias {
+      padding-top: 2rem;
+      scroll-margin-top: 2rem;
+    }
+
+    #noticias h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--acento);
+    }
+
+    .introduccion {
+      margin-bottom: 2rem;
+    }
+
+    .contenedor-noticias {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .noticia {
+      background: var(--superficie);
+      border: 1px solid #26314f;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .noticia:hover {
+      transform: translateY(-5px);
+      border-color: var(--acento);
+    }
+
+    .noticia .icono {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .noticia h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .noticia p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .fecha {
+      display: inline-block;
+      color: var(--acento);
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Diseño adaptable a móviles */
+    @media (max-width: 700px) {
+      .contenedor-noticias {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 2.5rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      #noticias h2 {
+        font-size: 1.6rem;
+      }
+    }
 
     footer {
       text-align: center;
       padding: 1.5rem;
       color: var(--apagado);
       font-size: 0.9rem;
+      border-top: 1px solid #26314f;
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <a class="logo" href="#inicio">Galaxy Defenders</a>
+
     <nav aria-label="Menú principal">
       <ul>
         <li><a href="#inicio" aria-current="page">Inicio</a></li>
@@ -92,9 +195,77 @@
 
   <main id="inicio">
     <h1>Hola, Galaxy Defenders</h1>
-    <p>Página inicial.</p>
+    <p>Bienvenido a nuestra página. Descubre las últimas novedades
+      del universo de Galaxy Defenders.</p>
+
+    <!-- Apartado de noticias -->
+    <section id="noticias">
+      <h2>Últimas noticias</h2>
+
+      <p class="introduccion">
+        ¡Mantente informado sobre todo lo que ocurre en la galaxia!
+      </p>
+
+      <div class="contenedor-noticias">
+
+        <article class="noticia">
+          <div class="icono">🚀</div>
+          <span class="fecha">Novedades</span>
+          <h3>Nueva misión espacial</h3>
+          <p>
+            Una nueva misión llevará a los defensores a explorar
+            planetas desconocidos y descubrir los secretos del universo.
+            ¿Estás preparado para la aventura?
+          </p>
+        </article>
+
+        <article class="noticia">
+          <div class="icono">👾</div>
+          <span class="fecha">Actualización</span>
+          <h3>Nuevos enemigos</h3>
+          <p>
+            Nuevas criaturas alienígenas amenazan la galaxia.
+            Los jugadores tendrán que mejorar sus habilidades
+            y trabajar en equipo para derrotarlas.
+          </p>
+        </article>
+
+        <article class="noticia">
+          <div class="icono">🌌</div>
+          <span class="fecha">Próximamente</span>
+          <h3>Explora nuevos planetas</h3>
+          <p>
+            Prepárate para visitar nuevos mundos, descubrir
+            paisajes sorprendentes y encontrar recursos
+            que te ayudarán a proteger el universo.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="acerca" style="padding-top: 4rem;">
+      <h2>Acerca de Galaxy Defenders</h2>
+      <p>
+        Somos una comunidad dedicada a la ciencia ficción,
+        los videojuegos y las aventuras espaciales.
+      </p>
+    </section>
+
+    <section id="contacto" style="padding-top: 4rem;">
+      <h2>Contacto</h2>
+      <p>
+        ¿Tienes alguna pregunta o sugerencia?
+        ¡Nos encantaría conocer tu opinión!
+      </p>
+      <p>Correo: contacto@galaxydefenders.com</p>
+    </section>
+
   </main>
 
-  <footer>© 2026 Galaxy Defenders</footer>
+  <footer>
+    © 2026 Galaxy Defenders. Todos los derechos reservados.
+  </footer>
+
 </body>
 </html>
