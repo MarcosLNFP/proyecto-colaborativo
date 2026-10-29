@@ -1,4 +1,4 @@
 # Proyecto colaborativo
 
-Proyecto colaborativo desarrollado por **Álvaro, Musa, Rahul y Marcos**.
+Proyecto colaborativo desarrollado por **Álvaro, Musa, Rahul, Marcos y Sara**.
 
